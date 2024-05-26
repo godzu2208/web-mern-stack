@@ -40,18 +40,30 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom"
-
+import Register from "./pages/Register"
 import Layout from "./layouts/Layout"
 const App = () => {
   return (
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Layout>
-            <span>
-            <p>Home Page</p>
-            </span>
-          </Layout>} />
+          <Route path="/" element={
+            <Layout>
+              <span>
+                <p>Home Page</p>
+              </span>
+            </Layout>} />
+          <Route path="/search" element={
+            <Layout>
+              <h2>Search Page</h2>
+            </Layout>
+          } />
+          <Route path="/register" element={
+            <Layout>
+              <Register />
+            </Layout>}
+          />
+
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
 

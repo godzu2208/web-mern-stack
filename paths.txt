@@ -1,0 +1,6 @@
+- project setup with VITE
+- setup Tailwind
+- use Hooks : useState, useForm
+- use React-query :  useMutation (mutate data from form register to server)
+
+=> the next : AppContext and Toast Notifications

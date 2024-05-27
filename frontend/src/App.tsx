@@ -42,6 +42,8 @@ import {
 } from "react-router-dom"
 import Register from "./pages/Register"
 import Layout from "./layouts/Layout"
+import SignIn from "./pages/SignIn"
+
 const App = () => {
   return (
     <>
@@ -63,7 +65,11 @@ const App = () => {
               <Register />
             </Layout>}
           />
-
+          <Route path="/sign-in" element={
+            <Layout>
+              <SignIn />
+            </Layout>}
+          />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
 

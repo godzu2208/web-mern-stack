@@ -8,7 +8,10 @@ import cookieParser from "cookie-parser";
 
 
 mongoose.connect(process.env.MONGODB_CONNECTION_STRING as string)
-    .then(() => console.log("Connected to MongoDB"))
+    .then(() =>
+        console.log("Connected to MongoDB :",
+            process.env.MONGODB_CONNECTION_STRING
+        ))
     .catch((error) => console.log("Failed to connect to MongoDB :", error));
 
 const app = express();
